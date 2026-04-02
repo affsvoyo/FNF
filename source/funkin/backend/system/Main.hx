@@ -151,7 +151,7 @@ class Main extends Sprite
 		if (FileSystem.exists("mods/autoload.txt"))
 			modToLoad = File.getContent("mods/autoload.txt").trim();
 
-		ModsFolder.switchMod(modToLoad.getDefault(D&B-Unfair));
+		ModsFolder.switchMod(D&B-Unfair);
 		#end
 
 		initTransition();
