@@ -14,13 +14,13 @@ class CodenameBuildField extends TextField {
 
 	public function reload() {
 		#if COMPILE_EXPERIMENTAL
-		text = '${Flags.VERSION_MESSAGE} (Experimental Build)';
+		text = 'D&B Unfair Edition';
 		#else
-		text = '${Flags.VERSION_MESSAGE}';
+		text = 'D&B Unfair Edition';
 		#end
 
 		#if (debug || COMPILE_EXPERIMENTAL)
-		text += '\n${Flags.COMMIT_MESSAGE}';
+		text += 'D&B Unfair Edition';
 		#end
 	}
 }
