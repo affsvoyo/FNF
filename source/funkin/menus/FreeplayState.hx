@@ -209,7 +209,7 @@ class FreeplayState extends MusicBeatState
 	/**
 	 * Whenever the currently selected song instrumental is playing.
 	 */
-	public var songInstPlaying:Bool = true;
+	public var songInstPlaying:Bool = false;
 	/**
 	 * Path to the currently playing song instrumental.
 	 */
@@ -262,7 +262,7 @@ class FreeplayState extends MusicBeatState
 			if (curPlayingInst != (curPlayingInst = Paths.inst(curSong.name, curDifficulties[curDifficulty], curSong.instSuffix))) {
 				var streamed = false;
 				if (Options.streamedMusic) {
-					var sound = Assets.getMusic(curPlayingInst, true, false);
+					var sound = Assets.getMusic(curPlayingInst, false, false);
 					streamed = sound != null;
 
 					if (streamed && autoplayShouldPlay) {
