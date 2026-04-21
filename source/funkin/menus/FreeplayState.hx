@@ -262,7 +262,7 @@ class FreeplayState extends MusicBeatState
 			if (curPlayingInst != (curPlayingInst = Paths.inst(curSong.name, curDifficulties[curDifficulty], curSong.instSuffix))) {
 				var streamed = false;
 				if (Options.streamedMusic) {
-					var sound = Assets.getMusic(curPlayingInst, false, false);
+					var sound;
 					streamed = sound != null;
 
 					if (streamed && autoplayShouldPlay) {
@@ -273,7 +273,6 @@ class FreeplayState extends MusicBeatState
 
 				if (!streamed) {
 					var huh:Void->Void = function() {
-						var soundPath = curPlayingInst;
 						var sound = null;
 						if (Assets.exists(soundPath, SOUND) || Assets.exists(soundPath, MUSIC))
 							sound = Assets.getSound(soundPath);
